@@ -1,16 +1,24 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  @apply transition flex items-center px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 font-mono bg-white dark:bg-gray-800;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.nav-link--active {
+  @apply transition flex items-center px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 font-mono bg-gray-100 dark:bg-gray-700;
 }
 
-* {
-  box-sizing: border-box;
+@tailwind utilities;
+
+@import "~prismjs/themes/prism-tomorrow.css";
+
+.text-xs-important {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none bg-white shadow-2xl h-4 w-4 rounded-full;
 }

@@ -8,12 +8,35 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "cronstrue": "^1.122.0",
+    "crypto-js": "^4.1.1",
+    "generate-password-browser": "^1.1.0",
+    "hex-rgb": "^5.0.0",
+    "is-valid-domain": "^0.1.4",
+    "js-yaml": "^4.1.0",
+    "lorem-ipsum": "^2.0.4",
+    "marked": "^4.0.0",
     "next": "12.0.3",
+    "next-themes": "^0.0.15",
+    "prismjs": "^1.25.0",
+    "qrcode.react": "^1.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-hotkeys-hook": "^3.4.4",
+    "react-icons": "^4.3.1",
+    "rgb-hex": "^4.0.0",
+    "sql-formatter": "^4.0.2",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.4.0",
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.3"
+    "eslint-config-next": "12.0.3",
+    "postcss": "^8.3.11",
+    "prop-types": "^15.7.2",
+    "tailwindcss": "^2.2.19"
   }
 }
