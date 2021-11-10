@@ -1,4 +1,5 @@
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from 'next-themes';
+import { VscGithub } from 'react-icons/vsc';
 
 import TopSearch from '../components/top_search';
 import ModeSwitch from '../components/mode_switch';
@@ -10,14 +11,21 @@ function FawkesApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
       <div>
-        <header
-          className="transition h-12 fixed w-full bg-gray-200 dark:text-gray-200 dark:bg-gray-900 dark:border-gray-900 border-b border-gray-300 flex items-center justify-between pl-24 pr-6 z-10"
-        >
+        <header className="transition h-12 fixed w-full bg-gray-200 dark:text-gray-200 dark:bg-gray-900 dark:border-gray-900 border-b border-gray-300 flex items-center justify-between pl-24 pr-6 z-10">
           <div className="" />
           <div className="">
             <TopSearch />
           </div>
           <div className="flex">
+            <a
+              href="https://github.com/madsobel/fawkes"
+              rel="noreferrer"
+              target="_blank"
+              className="transition p-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 mr-4"
+            >
+              <span className="sr-only">Github</span>
+              <VscGithub className="h-6 w-6" />
+            </a>
             <ModeSwitch />
           </div>
         </header>
