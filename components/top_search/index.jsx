@@ -20,8 +20,9 @@ const ALL_PAGES = [
   { id: 'p11', name: 'QR Code Generator', path: '/qr_code' },
   { id: 'p12', name: 'RGB to Hex', path: '/rgb_to_hex' },
   { id: 'p13', name: 'SQL Formatter', path: '/sql_formatter' },
-  { id: 'p14', name: 'URL Encode/Decode', path: '/url_encode_decode' },
-  { id: 'p15', name: 'YAML to JSON', path: '/yaml_to_json' },
+  { id: 'p14', name: 'Unescape String', path: '/unescape_string' },
+  { id: 'p15', name: 'URL Encode/Decode', path: '/url_encode_decode' },
+  { id: 'p16', name: 'YAML to JSON', path: '/yaml_to_json' },
 ];
 
 function TopSearch() {

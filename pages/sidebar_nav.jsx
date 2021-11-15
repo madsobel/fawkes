@@ -10,7 +10,7 @@ import { SiConvertio } from 'react-icons/si';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { BiParagraph } from 'react-icons/bi';
 import { IoIosColorPalette } from 'react-icons/io';
-import { BsMarkdownFill } from 'react-icons/bs';
+import { BsMarkdownFill, BsSlashSquare } from 'react-icons/bs';
 
 function SidebarNav() {
   const router = useRouter();
@@ -133,6 +133,17 @@ function SidebarNav() {
           <a className={router.pathname === '/sql_formatter' ? 'nav-link--active' : 'nav-link'}>
             <AiOutlineConsoleSql size="2em" className="p-1 mr-1 text-xs" />
             SQL Formatter
+          </a>
+        </Link>
+        <Link
+          href="/unescape_string"
+          passHref
+        >
+          <a className={router.pathname === '/unescape_string' ? 'nav-link--active' : 'nav-link'}>
+            <span className="transform rotate-90 mr-1">
+              <BsSlashSquare size="2em" className="p-1 text-xs" />
+            </span>
+            Unescape String
           </a>
         </Link>
         <Link
