@@ -1,7 +1,10 @@
+import dynamic from 'next/dynamic';
 import { ThemeProvider } from 'next-themes';
 import { VscGithub } from 'react-icons/vsc';
 
-import TopSearch from '../components/top_search';
+const TopSearch = dynamic(() => import('../components/top_search'), {
+  ssr: false,
+});
 import ModeSwitch from '../components/mode_switch';
 import SidebarNav from './sidebar_nav';
 

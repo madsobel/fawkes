@@ -1,8 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { BiCommand } from 'react-icons/bi';
 import { HiX } from 'react-icons/hi';
+
+import { isOsMacOS } from '../../utils/utils';
 
 const ALL_PAGES = [
   { id: 'p1', name: 'Base64 Encode/Decode', path: '/base_64' },
@@ -31,8 +33,9 @@ function TopSearch() {
   const pagesRefs = useRef([]);
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
-  const router = useRouter()
+  const router = useRouter();
   useHotkeys('cmd+k', () => searchInputRef.current.focus());
+  useHotkeys('ctrl+k', () => searchInputRef.current.focus());
 
   useEffect(() => {
     pagesRefs.current = pagesRefs.current.slice(0, pages.length);
@@ -82,7 +85,7 @@ function TopSearch() {
   }
 
   function handleNavigate(path) {
-    router.push(path)
+    router.push(path);
     searchInputRef.current.blur();
     resetSearch();
   }
@@ -157,7 +160,12 @@ function TopSearch() {
       />
       {!searchActive && searchInput.length === 0 && (
         <span className="inline-flex items-center absolute right-3 text-gray-700 dark:text-gray-400">
-          <BiCommand className="mr-1" />K
+          {isOsMacOS() ? (
+            <BiCommand className="mr-1" />
+          ) : (
+            <span className="mr-1">Ctrl</span>
+          )}
+          K
         </span>
       )}
       {searchInput.length > 0 && (
