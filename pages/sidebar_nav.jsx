@@ -10,7 +10,7 @@ import { SiConvertio } from 'react-icons/si';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { BiParagraph } from 'react-icons/bi';
 import { IoIosColorPalette } from 'react-icons/io';
-import { BsMarkdownFill, BsSlashSquare } from 'react-icons/bs';
+import { BsMarkdownFill, BsSlashSquare, BsFillQuestionCircleFill } from 'react-icons/bs';
 
 function SidebarNav() {
   const router = useRouter();
@@ -162,6 +162,15 @@ function SidebarNav() {
           <a className={router.pathname === '/url_encode_decode' ? 'nav-link--active' : 'nav-link'}>
             <span className="ml-1 mr-2 px-1 py-0.5 text-sm">&</span>
             URL Encode/Decode
+          </a>
+        </Link>
+        <Link
+          href="/whois"
+          passHref
+        >
+          <a className={router.pathname === '/whois' ? 'nav-link--active' : 'nav-link'}>
+            <BsFillQuestionCircleFill size="2em" className="p-1 mr-1 text-xs" />
+            Whois
           </a>
         </Link>
         <Link

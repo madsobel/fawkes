@@ -23,7 +23,8 @@ const ALL_PAGES = [
   { id: 'p14', name: 'SQL Formatter', path: '/sql_formatter' },
   { id: 'p15', name: 'Unescape String', path: '/unescape_string' },
   { id: 'p16', name: 'URL Encode/Decode', path: '/url_encode_decode' },
-  { id: 'p17', name: 'YAML to JSON', path: '/yaml_to_json' },
+  { id: 'p17', name: 'Whois', path: '/whois' },
+  { id: 'p18', name: 'YAML to JSON', path: '/yaml_to_json' },
 ];
 
 function TopSearch() {

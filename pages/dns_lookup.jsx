@@ -112,30 +112,32 @@ function DnsLookup() {
           Clear
         </button>
       </div>
-        <div className="max-w-lg mt-4">
-      <form action="POST" onSubmit={handleSubmit}>
-        <div className="flex items-center">
-          <input
-            type="text"
-            name="domain"
-            value={domain}
-            onChange={(event) => setDomain(event.target.value)}
-            className="transition w-full px-2 py-3 rounded-l-md border border-gray-300 focus:outline-none focus:ring focus:border-blue-300 font-mono text-sm border resize-none bg-white dark:bg-gray-600 dark:border-gray-500"
-            placeholder="Enter domain (Eg. google.com)"
-          />
-          <button
-            type="submit"
-            className="inline-flex items-center flex-shrink-0 px-4 py-2.5 border border-blue-600 hover:border-blue-700 rounded-r-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            <BsSearch className="mr-2" />
-            Look up
-          </button>
-        </div>
-        {!isDomainValid && (
-          <span className="text-red-600">The input is not a valid domain</span>
-        )}
-      </form>
-        </div>
+      <div className="max-w-lg mt-4">
+        <form action="POST" onSubmit={handleSubmit}>
+          <div className="flex items-center">
+            <input
+              type="text"
+              name="domain"
+              value={domain}
+              onChange={(event) => setDomain(event.target.value)}
+              className="transition w-full px-2 py-3 rounded-l-md border border-gray-300 focus:outline-none focus:ring focus:border-blue-300 font-mono text-sm border resize-none bg-white dark:bg-gray-600 dark:border-gray-500"
+              placeholder="Enter domain (Eg. google.com)"
+            />
+            <button
+              type="submit"
+              className="inline-flex items-center flex-shrink-0 px-4 py-2.5 border border-blue-600 hover:border-blue-700 rounded-r-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              <BsSearch className="mr-2" />
+              Look up
+            </button>
+          </div>
+          {!isDomainValid && (
+            <span className="text-red-600">
+              The input is not a valid domain
+            </span>
+          )}
+        </form>
+      </div>
       {didSubmitDomain && (
         <div className="mt-6">
           {nsRecords.length > 0 && (
