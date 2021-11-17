@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 import { VscJson } from 'react-icons/vsc';
 import { FaAsterisk } from 'react-icons/fa';
-import { MdDns, MdPassword } from 'react-icons/md';
+import { MdDns, MdPassword, MdHttp } from 'react-icons/md';
 import { HiOutlineQrcode, HiHashtag } from 'react-icons/hi';
 import { SiConvertio } from 'react-icons/si';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
@@ -61,6 +61,15 @@ function SidebarNav() {
           <a className={router.pathname === '/hex_to_rgb' ? 'nav-link--active' : 'nav-link'}>
             <IoIosColorPalette size="2em" className="p-1 mr-1 text-xs" />
             Hex to RGB
+          </a>
+        </Link>
+        <Link
+          href="/http_status_codes"
+          passHref
+        >
+          <a className={router.pathname === '/http_status_codes' ? 'nav-link--active' : 'nav-link'}>
+            <MdHttp size="2em" className="p-1 mr-1 text-xs" />
+            HTTP Status Codes
           </a>
         </Link>
         <Link
