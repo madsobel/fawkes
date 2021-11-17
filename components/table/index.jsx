@@ -15,7 +15,7 @@ function Table({ headings, entries }) {
                     <th
                       key={header}
                       scope="col"
-                      className="transition px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                      className="transition px-6 py-3 text-left text-sm font-bold text-gray-500 dark:text-gray-300 uppercase tracking-wider"
                     >
                       {header}
                     </th>
@@ -30,7 +30,13 @@ function Table({ headings, entries }) {
                         key={`cell_${idx}`}
                         className="transition px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-300"
                       >
-                        {value}
+                        {value.startsWith('https://') ? (
+                          <a className="transition text-blue-600 dark:text-blue-400 hover:underline focus:underline" href={value} rel="noreferrer" target="_blank">
+                            {value}
+                          </a>
+                        ) : (
+                          value
+                        )}
                       </td>
                     ))}
                   </tr>
