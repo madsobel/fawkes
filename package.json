@@ -27,6 +27,7 @@
     "react-icons": "^4.3.1",
     "rgb-hex": "^4.0.0",
     "sql-formatter": "^4.0.2",
+    "whoiser": "^1.13.0",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {

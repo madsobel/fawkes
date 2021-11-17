@@ -3572,6 +3572,13 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
+whoiser@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/whoiser/-/whoiser-1.13.0.tgz#1811b4ff06abdfd5bde03bcad2da3a0430c36fac"
+  integrity sha512-WJajZzKlO8mz2HRUIyKAeNxR7G6JZDfRYTJfLxj4OwZ2SMSPMNkCZa8q7TWiW/bCRczajHL3rA/ysv22ozxU9Q==
+  dependencies:
+    punycode "^2.1.1"
+
 word-wrap@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
