@@ -10,6 +10,17 @@ class FawkesDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta charset="UTF-8" />
+          <meta name="description" content="Fawkes is a utility app built for developers and other technical persons who appreciates having a swiss army knife at their disposal at all times." />
+          <meta name="author" content="Mads Obel" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="@madsobel" />
+          <meta property="og:description" content="Fawkes is a utility app built for developers and other technical persons who appreciates having a swiss army knife at their disposal at all times." />
+          <meta property="og:image" content="https://fawkesapp.com/android-chrome-512x512.png" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
