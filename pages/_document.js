@@ -41,6 +41,7 @@ class FawkesDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap"
             rel="stylesheet"
           />
+          <script async data-api="/_hive" src="/bee.js"></script>
         </Head>
         <body>
           <Main />
