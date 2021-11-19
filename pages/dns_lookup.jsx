@@ -9,6 +9,7 @@ function DnsLookup() {
   const [domain, setDomain] = useState('');
   const [isDomainValid, setIsDomainValid] = useState(true);
   const [didSubmitDomain, setDidSubmitDomain] = useState(false);
+  const [records, setRecords] = useState([]);
   const [aRecords, setARecords] = useState([]);
   const [aaaaRecords, setAAAARecords] = useState([]);
   const [nsRecords, setNSRecords] = useState([]);
@@ -39,6 +40,7 @@ function DnsLookup() {
         .then((response) => response.json())
         .then((records) => {
           setDidSubmitDomain(true);
+          setRecords(records);
 
           setNSRecords(
             records
@@ -140,6 +142,11 @@ function DnsLookup() {
       </div>
       {didSubmitDomain && (
         <div className="mt-6">
+          {records.length == 0 && (
+            <div className="">
+              Oh noes! For some reason we could not find any DNS records for that domain.
+            </div>
+          )}
           {nsRecords.length > 0 && (
             <div className="mb-6">
               <h2 className="transition font-bold mb-1 text-gray-700 dark:text-gray-300 text-lg">

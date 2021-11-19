@@ -30,7 +30,7 @@ function Table({ headings, entries }) {
                         key={`cell_${idx}`}
                         className="transition px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-300"
                       >
-                        {value.startsWith('https://') ? (
+                        {String(value).startsWith('https://') ? (
                           <a className="transition text-blue-600 dark:text-blue-400 hover:underline focus:underline" href={value} rel="noreferrer" target="_blank">
                             {value}
                           </a>
